@@ -14,6 +14,7 @@ __PROBLEM_DEFAULT_CODE__
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::*;
 
     #[test]
     fn test___PROBLEM_ID__() {
