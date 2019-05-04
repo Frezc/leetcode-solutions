@@ -1,4 +1,6 @@
 use std::fmt::Debug;
+use std::collections::HashMap;
+
 #[macro_export]
 macro_rules! svec {
     ($($x:expr),*) => ({
@@ -12,10 +14,25 @@ macro_rules! svec {
 #[macro_export]
 macro_rules! strvec {
     ($($x:expr),*) => ({
-        let mut v = vec![$(String::from($x)),*];
-        v
+        vec![$(String::from($x)),*]
     });
     ($($x:expr,)*) => (strvec![$($x),*])
+}
+
+#[macro_export]
+macro_rules! vec2 {
+    ($([$($x:expr),*]),*) => ({
+        vec![$(vec![$($x),*]),*]
+    });
+}
+
+#[macro_export]
+macro_rules! map {
+    ($($k:expr => $v:expr),*) => {{
+        let mut map = HashMap::new();
+        $(map.insert($k, $v);)*
+        map
+    }}
 }
 
 pub fn vec_eq<T: PartialEq>(v1: &Vec<T>, v2: &Vec<T>) -> bool {
