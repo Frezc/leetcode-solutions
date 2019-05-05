@@ -55,7 +55,7 @@ impl Solution {
         let mut index = 0;
         let mut k = k - 1;
         while k > 0 {
-            let cur_fac = factorial((n - 1 - index));
+            let cur_fac = factorial(n - 1 - index);
             let i = k / cur_fac;
             if i > 0 {
                 let splice_index = (n - 1 - index - i) as usize;

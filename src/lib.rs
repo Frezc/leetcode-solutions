@@ -1,6 +1,7 @@
 #![allow(dead_code, unused_imports)]
 #[macro_use]
 mod utils;
+mod linked_list;
 pub use utils::*;
 
 mod n0001_two_sum;
@@ -21,3 +22,4 @@ mod n0057_insert_interval;
 mod n0058_length_of_last_word;
 mod n0059_spiral_matrix_ii;
 mod n0060_permutation_sequence;
+mod n0061_rotate_list;
