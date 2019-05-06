@@ -68,6 +68,16 @@
  * 
  * 
  */
+/// The key point of this problem is checking '*'.
+/// We can split it to sub question. If there is s=aab & p=*b, we are following the steps:
+/// 1. match aab & b, a != b, fail
+/// 2. match ab & b, a != b, fail
+/// 3. match b & b, b == b, matched!
+/// The steps describe '*' match solution that match sub-pattern with sub-string one by one.
+/// And matching ? and exact char as long as compared.
+///
+/// Recursive makes code clear but slow.
+/// We need use a matched map to reduce redundant sub-string & sub-pattern matching loop.
 pub struct Solution {}
 
 // submission codes start here
