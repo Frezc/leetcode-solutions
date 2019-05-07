@@ -33,6 +33,11 @@
  * 
  * 
  */
+/// Two key points:
+/// 1. Solving this problem by dividing instead of loop, the latter will make time exceed.
+/// # Example
+/// Divide `my_pow(8.9, 99)` to `my_pow(8.9, 49) * my_pow(8.9, 50)`
+/// 2. Keep 5 decimal place.
 pub struct Solution {}
 
 // submission codes start here

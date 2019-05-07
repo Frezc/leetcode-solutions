@@ -23,6 +23,7 @@
  * 
  * 
  */
+/// use Hashmap
 pub struct Solution {}
 
 // submission codes start here

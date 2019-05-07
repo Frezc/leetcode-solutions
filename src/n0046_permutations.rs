@@ -19,6 +19,10 @@
  * 
  * 
  */
+///
+/// A simple permutation problem,
+/// just loop every element and combine with permutation of sub-array.
+/// Example: `permute([1,2,3])`, take 2, and combine with `permute([1,3])`.
 pub struct Solution {}
 
 // submission codes start here

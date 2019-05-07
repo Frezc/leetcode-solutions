@@ -23,8 +23,17 @@
 pub struct Solution {}
 
 // submission codes start here
-
-// 这道题还有很巧妙的bfs(https://leetcode.com/problems/jump-game-ii/discuss/18028/O(n)-BFS-solution), 左侧最优解和O(n)的贪心(https://leetcode.windliang.cc/leetCode-45-Jump-Game-II.html)
+/// We can split this question to some sub-question:
+/// get the minimum number of jumps from an index to last index.
+/// For example,
+/// We jump the list from index 0: 3 2 1 1 1.
+/// First element is 3, so we can jump 1,2,3 step.
+/// For 1 step, the minimum jumps is `1 + jump([2,1,1,1])`,
+/// and 2 => `1 + jump([1,1,1])`, 3 => `1 + jump([1,1])`.
+/// Thus we get the minimum step is `1 + min(jump_from(1), jump_from(2), jump_from(3))`.
+/// In order to prevent repetitive computation, we should add cache to every index.
+///
+/// 这道题还有很巧妙的bfs(https://leetcode.com/problems/jump-game-ii/discuss/18028/O(n)-BFS-solution), 左侧最优解和O(n)的贪心(https://leetcode.windliang.cc/leetCode-45-Jump-Game-II.html)
 impl Solution {
     pub fn jump(nums: Vec<i32>) -> i32 {
         let mut cache = Cache {

@@ -17,6 +17,14 @@
  * 
  * 
  */
+/// The core of algorithm is similar to #46.
+/// But we should find unique item to prevent duplicate result.
+/// # Example
+/// For input `[1,1,1,2]`, we shouldn't loop every elements,
+/// because we will get same result for the first three `1`.
+/// We need loop the unique array `[1,2]`,
+/// and permute sub-array that except first same element, like `1` to `[1,1,2]`.
+/// Do recursively util one element.
 pub struct Solution {}
 
 // submission codes start here

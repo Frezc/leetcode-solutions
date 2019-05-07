@@ -48,6 +48,26 @@
  * 
  * 
  */
+/// Loop every 4-corner-point-rotate circle by circle.
+/// # Example
+/// [
+///   [1,2,3],
+///   [4,5,6],
+///   [7,8,9]
+/// ],
+/// 1. first rotate 4 corner element
+/// [
+///   [7,2,1],
+///   [4,5,6],
+///   [9,8,3]
+/// ],
+/// 2. then rotate every element on every edge
+/// [
+///   [7,4,1],
+///   [8,5,2],
+///   [9,6,3]
+/// ],
+/// 3. rotate next circle inside
 pub struct Solution {}
 
 // submission codes start here
