@@ -25,6 +25,17 @@
  * rotate 4 steps to the right: 2->0->1->NULL
  * 
  */
+/// A simple linked list problem, but not easy to rust
+/// when calling `next` on a node, you will take it's immutable borrow
+/// so you're not able to mutate it in same scope
+/// Check this [article](https://rcoh.me/posts/rust-linked-list-basically-impossible/) for more information
+/// and there is a [book](https://rust-unofficial.github.io/too-many-lists/) maybe helpful
+///
+/// In this solution, I just create new node to avoid borrow check.
+///
+/// More elegant solution is pointing tail's next to head to create a circular linked list,
+/// then step `size - k % size`. You will get tail of result list,
+/// and next node is the head of result list.
 pub struct Solution {}
 use super::linked_list::{ListNode,to_list};
 
@@ -47,17 +58,6 @@ use super::linked_list::{ListNode,to_list};
 //   }
 // }
 impl Solution {
-    /// A simple linked list problem, but not easy to rust
-    /// when calling `next` on a node, you will take it's immutable borrow
-    /// so you're not able to mutate it in same scope
-    /// Check this [article](https://rcoh.me/posts/rust-linked-list-basically-impossible/) for more information
-    /// and there is a [book](https://rust-unofficial.github.io/too-many-lists/) maybe helpful
-    ///
-    /// In this solution, I just create new node to avoid borrow check.
-    ///
-    /// More elegant solution is pointing tail's next to head to create a circular linked list,
-    /// then step `size - k % size`. You will get tail of result list,
-    /// and next node is the head of result list.
     pub fn rotate_right(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
         let mut size = 0;
         let h = Box::new(ListNode {

@@ -16,6 +16,7 @@
  * 
  * 
  */
+/// Similar to #54, simulate the spiral path circle by circle.
 pub struct Solution {}
 
 // submission codes start here

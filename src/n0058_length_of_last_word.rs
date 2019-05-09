@@ -14,6 +14,8 @@
  * 
  * 
  */
+/// I use trim and split in std to solve this question.
+/// But it's not hard to loop from end and check [A-Za-z].
 pub struct Solution {}
 
 // submission codes start here

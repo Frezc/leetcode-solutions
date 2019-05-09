@@ -25,6 +25,18 @@
  * 
  * 
  */
+/// Same as #45, but i use greedy solution here.
+/// In the loop, we always compute the largest index we can reach from current index.
+/// If current index large than the largest index, it means we are not able to the last index.
+///
+/// # Example
+/// Input:           [2,3,1,1,4]
+/// Reachable index: [0,2,4,3,4]
+///                     ↑ return true here
+///
+/// Input:           [3,2,1,0,4]
+/// Reachable index: [0,3,3,3, ]
+///                         ↑ current index 4 > largest index(3), return false
 pub struct Solution {}
 
 // submission codes start here

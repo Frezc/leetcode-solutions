@@ -27,6 +27,7 @@
  * 
  * 
  */
+/// same as #51
 pub struct Solution {}
 
 // submission codes start here

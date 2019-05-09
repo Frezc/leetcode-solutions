@@ -26,6 +26,8 @@
  * Output: [1,2,3,4,8,12,11,10,9,5,6,7]
  * 
  */
+/// Simulate the spiral path circle by circle.
+/// Pay attention to one width or height matrix. Don't step duplicate element.
 pub struct Solution {}
 
 // submission codes start here

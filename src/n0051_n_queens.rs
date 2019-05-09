@@ -28,12 +28,14 @@
  * 
  * 
  */
+/// A DFS solution.
+/// 1. We place a queen to every available position in a row.
+/// 2. For each case, we do step 1 to it's next row. Until reach end or no available position.
 pub struct Solution {}
 
 // submission codes start here
 
 impl Solution {
-    // iterate is enough
     pub fn solve_n_queens(n: i32) -> Vec<Vec<String>> {
         let mut pos_result: Vec<Vec<usize>> = vec![];
         let mut q_pos = Vec::with_capacity(n as usize);

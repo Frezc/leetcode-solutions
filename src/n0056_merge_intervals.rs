@@ -21,6 +21,8 @@
  * NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
  * 
  */
+/// The key point of this question is to sort array by first element.
+/// Then we can check intersection and merge in one loop.
 pub struct Solution {}
 
 // submission codes start here

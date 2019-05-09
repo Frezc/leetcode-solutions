@@ -22,6 +22,8 @@
  * NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
  * 
  */
+/// Find the first intersected interval & the last intersected interval,
+/// and merge them into one interval.
 pub struct Solution {}
 
 // submission codes start here

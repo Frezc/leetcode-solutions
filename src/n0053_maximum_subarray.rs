@@ -16,6 +16,16 @@
  * If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
  * 
  */
+/// A greedy solution.
+/// 1. Loop from 1 to end, and mark each position to i. Storage first element to Sum.
+/// 2. We can calculate the maximum sum of sub-array that end with i by follow step.
+/// 3. If Sum > 0, add current number to Sum. Else assign number to Sum.
+/// 4. Loop until i to end, we will get the largest sum.Return the max Sum.
+///
+/// # Example
+/// Input: [-2,1,-3,4,-1,2,1,-5,4]
+/// Sum:   [-2,1,-2,4, 3,5,6, 1,5]
+/// Output: 6
 pub struct Solution {}
 
 // submission codes start here
