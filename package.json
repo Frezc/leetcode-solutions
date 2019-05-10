@@ -1,0 +1,27 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "This is my leetcode solutions with rust.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "gen": "leetcode show -gx -l javascript -o contests",
+    "list": "leetcode list",
+    "login": "leetcode user -l",
+    "submit": "leetcode submit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frezc/leetcode-solutions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frezc/leetcode-solutions/issues"
+  },
+  "homepage": "https://github.com/Frezc/leetcode-solutions#readme",
+  "dependencies": {
+    "jest": "^24.8.0",
+    "leetcode-cli": "^2.6.1"
+  }
+}
