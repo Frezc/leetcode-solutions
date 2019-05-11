@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "gen": "leetcode show -gx -l javascript -o contests",
+    "gen": "leetcode show -gx -l javascript -o js",
     "list": "leetcode list",
     "login": "leetcode user -l",
-    "submit": "leetcode submit"
+    "submit": "leetcode submit",
+    "ltest": "leetcode test"
+  },
+  "jest": {
+    "testRegex": "/js/.*.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +25,7 @@
   },
   "homepage": "https://github.com/Frezc/leetcode-solutions#readme",
   "dependencies": {
+    "@types/jest": "^24.0.12",
     "jest": "^24.8.0",
     "leetcode-cli": "^2.6.1"
   }

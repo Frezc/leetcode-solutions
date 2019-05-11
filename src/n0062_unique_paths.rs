@@ -31,17 +31,30 @@
  * Output: 28
  * 
  */
+/// A simple DP solution
+/// Compute possible paths from 1*1 to m*n
+/// For i(1~m)*j(1~n) board, if i or j equals 1 return 1, else return paths[i-1,j] + paths[i,j-1]
 pub struct Solution {}
 
 // submission codes start here
 
 impl Solution {
     pub fn unique_paths(m: i32, n: i32) -> i32 {
-        if m == 1 || n == 1 {
-            1
-        } else {
-            Solution::unique_paths(m - 1, n) + Solution::unique_paths(m, n - 1)
+        let m = m as usize;
+        let n = n as usize;
+        let mut state = Vec::with_capacity(m);
+        for i in 0..m {
+            state.push(Vec::with_capacity(n));
+            for j in 0..n {
+                if i == 0 || j == 0 {
+                    state[i].push(1);
+                } else {
+                    let new_value = state[i][j - 1] + state[i - 1][j];
+                    state[i].push(new_value);
+                }
+            }
         }
+        state[m - 1][n - 1]
     }
 }
 
@@ -59,6 +72,7 @@ mod tests {
         assert_eq!(Solution::unique_paths(1, 1), 1);
         assert_eq!(Solution::unique_paths(2, 1), 1);
         assert_eq!(Solution::unique_paths(99, 1), 1);
-        assert_eq!(Solution::unique_paths(99, 99), 1);
+        // 99,99 will overflow i32
+//        assert_eq!(Solution::unique_paths(99, 99), 1);
     }
 }
