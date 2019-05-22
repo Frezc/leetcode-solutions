@@ -41,3 +41,4 @@ mod n0077_combinations;
 mod n0078_subsets;
 mod n0079_word_search;
 mod n0080_remove_duplicates_from_sorted_array_ii;
+mod n0081_search_in_rotated_sorted_array_ii;
