@@ -44,3 +44,4 @@ mod n0080_remove_duplicates_from_sorted_array_ii;
 mod n0081_search_in_rotated_sorted_array_ii;
 mod n0082_remove_duplicates_from_sorted_list_ii;
 mod n0083_remove_duplicates_from_sorted_list;
+mod n0084_largest_rectangle_in_histogram;
