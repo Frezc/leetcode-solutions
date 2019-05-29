@@ -64,12 +64,47 @@
 pub struct Solution {}
 
 // submission codes start here
+use std::collections::HashMap;
 
 impl Solution {
     pub fn is_scramble(s1: String, s2: String) -> bool {
+        Cache {
+            dp: HashMap::new()
+        }.check_scramble(&s1, &s2)
+    }
+}
+
+struct Cache {
+    dp: HashMap<String, bool>
+}
+
+impl Cache {
+    fn check_scramble(&mut self, s1: &str,  s2: &str) -> bool {
+        let key = [s1, s2].join("|");
+        if let Some(&re) = self.dp.get(&key) {
+            return re;
+        }
+        if s1 == s2 {
+            self.dp.insert(key, true);
+            return true;
+        }
+
+        for i in 1..s1.len() {
+            if self.check_scramble(&s1[0..i], &s2[0..i]) && self.check_scramble(&s1[i..], &s2[i..]) {
+                self.dp.insert(key, true);
+                return true;
+            }
+            if self.check_scramble(&s1[0..i], &s2[s2.len()-i..]) && self.check_scramble(&s1[i..], &s2[0..s2.len()-i]) {
+                self.dp.insert(key, true);
+                return true;
+            }
+        }
+
+        self.dp.insert(key, false);
         false
     }
 }
+
 
 // submission codes end
 
@@ -80,5 +115,8 @@ mod tests {
 
     #[test]
     fn test_87() {
+        assert_eq!(Solution::is_scramble("great".to_string(), "rgeat".to_string()), true);
+        assert_eq!(Solution::is_scramble("abcde".to_string(), "caebd".to_string()), false);
+        assert_eq!(Solution::is_scramble("ccabcbabcbabbbbcbb".to_string(), "bbbbabccccbbbabcba".to_string()), false);
     }
 }
