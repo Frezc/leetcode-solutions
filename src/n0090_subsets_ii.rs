@@ -1,34 +1,33 @@
 /**
- * [78] Subsets
+ * [90] Subsets II
  *
- * Given a set of distinct integers, nums, return all possible subsets (the power set).
+ * Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
  * 
  * Note: The solution set must not contain duplicate subsets.
  * 
  * Example:
  * 
  * 
- * Input: nums = [1,2,3]
+ * Input: [1,2,2]
  * Output:
  * [
- *   [3],
- *   [1],
  *   [2],
- *   [1,2,3],
- *   [1,3],
- *   [2,3],
+ *   [1],
+ *   [1,2,2],
+ *   [2,2],
  *   [1,2],
  *   []
  * ]
  * 
+ * 
  */
-/// recursion with nums slice & result size
 pub struct Solution {}
 
 // submission codes start here
 
 impl Solution {
-    pub fn subsets(nums: Vec<i32>) -> Vec<Vec<i32>> {
+    pub fn subsets_with_dup(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
+        nums.sort();
         let mut result = vec![];
         for i in 0..=nums.len() {
             result.extend(subsets_with_size(&nums, i))
@@ -44,6 +43,9 @@ fn subsets_with_size(nums: &Vec<i32>, size: usize) -> Vec<Vec<i32>> {
     let mut result = vec![];
 
     for i in 0..=nums.len()-size {
+        if i > 0 && nums[i] == nums[i-1] {
+            continue;
+        }
         if size == 1 {
             result.push(vec![nums[i]]);
         } else {
@@ -62,7 +64,6 @@ fn subsets_with_size(nums: &Vec<i32>, size: usize) -> Vec<Vec<i32>> {
     result
 }
 
-
 // submission codes end
 
 #[cfg(test)]
@@ -71,17 +72,15 @@ mod tests {
     use crate::*;
 
     #[test]
-    fn test_78() {
-        assert_vec2_eq(&Solution::subsets(vec![1,2,3]), &vec2![
-  [3],
-  [1],
+    fn test_90() {
+        assert_vec2_eq(&Solution::subsets_with_dup(vec![1,2,2]), &vec2![
   [2],
-  [1,2,3],
-  [1,3],
-  [2,3],
+  [1],
+  [1,2,2],
+  [2,2],
   [1,2],
   []
 ]);
-        assert_vec2_eq(&Solution::subsets(vec![]), &vec![vec![0;0];1]);
+        assert_vec2_eq(&Solution::subsets_with_dup(vec![]), &vec![vec![0;0];1]);
     }
 }
