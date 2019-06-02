@@ -65,7 +65,7 @@ fn parse_extra_use(code: &str) -> String {
         extra_use_line.push_str("\nuse super::linked_list::{ListNode, to_list};")
     }
     if code.contains("pub struct TreeNode") {
-        extra_use_line.push_str("\nuse super::util::tree::{TreeNode, to_tree};")
+        extra_use_line.push_str("\nuse super::tree::{TreeNode, to_tree};")
     }
     if code.contains("pub struct Point") {
         extra_use_line.push_str("\nuse super::util::point::Point;")

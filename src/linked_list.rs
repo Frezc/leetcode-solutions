@@ -25,6 +25,10 @@ pub fn to_list(vec: Vec<i32>) -> Option<Box<ListNode>> {
     current
 }
 
+pub fn arr_to_list(arr: &[i32]) -> Option<Box<ListNode>> {
+    to_list(Vec::from(arr))
+}
+
 #[macro_export]
 macro_rules! linked {
     ($($e:expr),*) => {to_list(vec![$($e.to_owned()), *])};
