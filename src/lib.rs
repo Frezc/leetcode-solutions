@@ -62,3 +62,4 @@ mod n0096_unique_binary_search_trees;
 mod n0097_interleaving_string;
 mod n0098_validate_binary_search_tree;
 mod n0100_same_tree;
+mod n0099_recover_binary_search_tree;
