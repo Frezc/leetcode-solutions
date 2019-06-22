@@ -65,3 +65,8 @@ mod n0100_same_tree;
 mod n0099_recover_binary_search_tree;
 mod n0101_symmetric_tree;
 mod n0102_binary_tree_level_order_traversal;
+mod n0103_binary_tree_zigzag_level_order_traversal;
+mod n0104_maximum_depth_of_binary_tree;
+mod n0105_construct_binary_tree_from_preorder_and_inorder_traversal;
+mod n0106_construct_binary_tree_from_inorder_and_postorder_traversal;
+mod n0107_binary_tree_level_order_traversal_ii;
