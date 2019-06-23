@@ -66,7 +66,7 @@
 /// 2. How to in-order traversal a tree in constant space ?
 /// Usually traversal a tree recursively need O(log n) ~ O(n) space.
 /// There is a algorithm named morris traversal only need constant space.
-/// Check https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html
+/// Check https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html:wq:
 pub struct Solution {}
 use super::tree::{TreeNode, to_tree};
 
