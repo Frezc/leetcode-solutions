@@ -14,6 +14,20 @@ impl ListNode {
     }
 }
 
+/** copy
+impl ListNode {
+    pub fn to_vec(&self) -> Vec<i32> {
+        let mut node = Some(self);
+        let mut result = vec![];
+        while let Some(n) = node {
+            result.push(n.val);
+            node = n.next.as_ref().map(|b| b.as_ref());
+        }
+        result
+    }
+}
+*/
+
 // helper function for test
 pub fn to_list(vec: Vec<i32>) -> Option<Box<ListNode>> {
     let mut current = None;
@@ -28,6 +42,7 @@ pub fn to_list(vec: Vec<i32>) -> Option<Box<ListNode>> {
 pub fn arr_to_list(arr: &[i32]) -> Option<Box<ListNode>> {
     to_list(Vec::from(arr))
 }
+
 
 #[macro_export]
 macro_rules! linked {

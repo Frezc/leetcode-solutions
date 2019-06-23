@@ -53,6 +53,20 @@
  * 
  * 
  */
+/// Two points of this problem:
+///
+/// 1. How to find the 2 wrong position nodes ?
+/// If we **in-order** traversal binary search tree, we can get a sorted ascend array.
+/// Image what happened if we swap two numbers in this array.
+/// For example, `[1,2,3,4,5,6] => [1,2,5,4,3,6]`.
+/// Obviously, the 2 wrong position number are the **first** number larger than next
+/// and the **last** number smaller than previous.
+///
+///
+/// 2. How to in-order traversal a tree in constant space ?
+/// Usually traversal a tree recursively need O(log n) ~ O(n) space.
+/// There is a algorithm named morris traversal only need constant space.
+/// Check https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html
 pub struct Solution {}
 use super::tree::{TreeNode, to_tree};
 
