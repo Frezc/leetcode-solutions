@@ -103,7 +103,7 @@ impl<'a> Parser<'a> {
         }
         if let Some(c) = self.iter.peek() {
             match c {
-                '0'...'9' => {
+                '0'..='9' => {
                     self.parse_digits()?;
                     if let Some('.') = self.iter.peek() {
                         self.iter.next();
@@ -132,7 +132,7 @@ impl<'a> Parser<'a> {
         }
         if let Some(c) = self.iter.peek() {
             match c {
-                '0'...'9' => {
+                '0'..='9' => {
                     self.parse_digits()?;
                 }
                 _ => return Err(())
@@ -145,7 +145,7 @@ impl<'a> Parser<'a> {
 
     fn parse_digits(&mut self) -> Result<(), ()> {
         let mut parsed = false;
-        while let Some('0'...'9') = self.iter.peek() {
+        while let Some('0'..='9') = self.iter.peek() {
             if !parsed { parsed = true; }
             self.iter.next();
         }
