@@ -14,6 +14,10 @@
  * 
  * 
  */
+/// It obvious we should sort array first. To meet O(n) complexity, we could choose radix sort.
+/// This question has some edge cases that isn't mentioned:
+/// 1. Negative numbers. We need sort negative and positive separately in radix sort.
+/// 2. Repeated numbers. Example: for input [1,1,2,2,3,3], result is [1,2,3]
 pub struct Solution {}
 
 // submission codes start here
