@@ -92,3 +92,4 @@ mod n0126_word_ladder_ii;
 mod n0128_longest_consecutive_sequence;
 mod n0129_sum_root_to_leaf_numbers;
 mod n0130_surrounded_regions;
+mod n0131_palindrome_partitioning;
