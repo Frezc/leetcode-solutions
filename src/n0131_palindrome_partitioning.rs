@@ -18,6 +18,10 @@
  * 
  */
 /// a DFS solution
+/// 1. split string to a, b parts by index. a = s[0..i]. b = s[i..];
+/// 2. If a is palindrome(compare to rev),
+///     if i is last index, return [a];
+///     else pass b string to step 1 recursively, and get all possible split that pretend with a.
 pub struct Solution {}
 
 // submission codes start here
