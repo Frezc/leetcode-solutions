@@ -97,3 +97,6 @@ mod n0132_palindrome_partitioning_ii;
 mod n0134_gas_station;
 mod n0136_single_number;
 mod n0137_single_number_ii;
+mod n0143_reorder_list;
+mod n0144_binary_tree_preorder_traversal;
+mod n0145_binary_tree_postorder_traversal;

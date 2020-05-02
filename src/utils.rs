@@ -35,6 +35,7 @@ macro_rules! map {
     }}
 }
 
+/// check unordered vector equal
 pub fn vec_eq<T: PartialEq>(v1: &Vec<T>, v2: &Vec<T>) -> bool {
     if v1.len() != v2.len() {
         return false;
@@ -47,6 +48,7 @@ pub fn vec_eq<T: PartialEq>(v1: &Vec<T>, v2: &Vec<T>) -> bool {
     true
 }
 
+/// check unordered vector of vector equal
 pub fn vec2_eq<T: PartialEq>(v1: &Vec<Vec<T>>, v2: &Vec<Vec<T>>) -> bool {
     if v1.len() != v2.len() {
         return false;
