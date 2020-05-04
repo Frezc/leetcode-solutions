@@ -101,3 +101,5 @@ mod n0143_reorder_list;
 mod n0144_binary_tree_preorder_traversal;
 mod n0145_binary_tree_postorder_traversal;
 mod n0147_insertion_sort_list;
+mod n0149_max_points_on_a_line;
+mod n0150_evaluate_reverse_polish_notation;
