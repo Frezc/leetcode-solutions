@@ -109,3 +109,4 @@ mod n0153_find_minimum_in_rotated_sorted_array;
 mod n0154_find_minimum_in_rotated_sorted_array_ii;
 mod n0155_min_stack;
 mod n0394_decode_string;
+mod n0162_find_peak_element;
