@@ -4,15 +4,12 @@
   "description": "This is my leetcode solutions with rust.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "gen": "leetcode show -gx -l javascript -o js",
     "list": "leetcode list",
     "login": "leetcode user -l",
     "submit": "leetcode submit",
-    "ltest": "leetcode test"
-  },
-  "jest": {
-    "testRegex": "/js/.*.js"
+    "ltest": "leetcode test",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,8 +22,10 @@
   },
   "homepage": "https://github.com/Frezc/leetcode-solutions#readme",
   "dependencies": {
-    "@types/jest": "^24.0.12",
-    "jest": "^24.8.0",
-    "leetcode-cli": "^2.6.1"
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "leetcode-cli": "^2.6.1",
+    "ts-jest": "^27.0.2",
+    "typescript": "^4.3.2"
   }
 }
