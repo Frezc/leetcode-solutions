@@ -1,4 +1,5 @@
 
+// find max
 function maxArea(h: number, w: number, horizontalCuts: number[], verticalCuts: number[]): number {
     horizontalCuts.sort((a, b) => a - b);
     verticalCuts.sort((a, b) => a - b);

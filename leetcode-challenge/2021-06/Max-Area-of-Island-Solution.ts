@@ -1,3 +1,5 @@
+
+// dp
 function maxAreaOfIsland(grid: number[][]): number {
     const m = grid.length;
     const n = grid[0].length;

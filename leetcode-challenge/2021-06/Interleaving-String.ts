@@ -1,3 +1,4 @@
+// just recursive brute force
 function isInterleave(s1: string, s2: string, s3: string): boolean {
     const checker = new Checker(s1, s2, s3);
     return checker.check();
