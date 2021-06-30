@@ -1,9 +1,9 @@
-function TreeNode(val) {
+export function TreeNode(val) {
   this.val = val;
   this.left = this.right = null;
 }
 
-function getBinaryTree(array) {
+export function getBinaryTree(array) {
   const queue = [];
   if (array.length > 0) {
     const root = new TreeNode(array[0]);
